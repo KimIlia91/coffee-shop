@@ -20,9 +20,9 @@ const Header = () => {
             </svg>
             </div>
             <nav className='header__nav'>
-                <a to="/" className="header__nav-item">Coffee house</a>
-                <a to="/coffee" className="header__nav-item">Our coffee</a>
-                <a to="/" className="header__nav-item">For your pleasure</a>
+                <a href="#" className="header__nav-item">Coffee house</a>
+                <a href="#" className="header__nav-item">Our coffee</a>
+                <a href="#" className="header__nav-item">For your pleasure</a>
             </nav>
         </header>
     )

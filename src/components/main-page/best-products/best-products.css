@@ -12,6 +12,10 @@
     font-weight: 400;
 }
 
+a {
+    text-decoration: none;
+}
+
 .best-products__wrapper {
     display: flex;
     justify-content: center;
