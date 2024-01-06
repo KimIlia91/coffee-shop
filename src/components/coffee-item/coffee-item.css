@@ -1,0 +1,40 @@
+.coffee-item {
+    max-width: 220px;
+    text-align: center;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    padding: 37px 27px 22px 26px;
+    text-decoration: none;
+}
+
+.coffee-item img {
+    width: 100%;
+}
+
+.coffee-item__name {
+    margin-top: 14px;
+    color: #000;
+    text-align: center;
+    font-family: Merienda;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.coffee-item__country {
+    margin: 14px 0 0 0;
+    color: #000;
+    text-align: right;
+    font-family: Merienda;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.coffee-item__price {
+    margin: 14px 0 0 0;
+    color: #000;
+    text-align: right;
+    font-family: Merienda;
+    font-size: 14px;
+    font-weight: 700;
+}

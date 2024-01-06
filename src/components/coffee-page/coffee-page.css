@@ -1,0 +1,25 @@
+.coffee-page {
+    padding-top: 70px 0 30px 0;
+}
+
+.coffee-page__main {
+    min-height: 260px;
+    background: url('/public/img/bg/coffee-shop-bg.png'), lightgray 50% / cover no-repeat;
+}
+
+.coffee-page__text {
+    color: #FFF;
+    font-family: Merienda;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.coffee-page__control-panel {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 83px;
+}

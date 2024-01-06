@@ -1,0 +1,36 @@
+.footer {
+    padding: 30px 0 20px 0;
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__nav {
+    display: flex;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+.footer__nav-item {
+    color: #000;
+    font-family: Merienda;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.footer__divider {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer__line {
+    width: 60px;
+    height: 1px;
+    background-color: #000;
+}
