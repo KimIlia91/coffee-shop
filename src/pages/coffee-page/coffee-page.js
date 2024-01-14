@@ -1,3 +1,4 @@
+import { useState } from "react";
 import AppSearchPanel from "../../components/search-panel/app-search-panel";
 import About from "../../components/about/about";
 import AppFilter from "../../components/filter/app-filter";
@@ -6,7 +7,6 @@ import Footer from "../../components/footer/footer";
 import Line from "../../components/line/line";
 import SubPromo from "../../components/subpromo/subpromo";
 import './coffee-page.css';
-import { useState } from "react";
 
 const CoffeePage = ({ filter, onUpdateFilter }) => {
     const [ searchTerm, setSearchTerm ] = useState('');
