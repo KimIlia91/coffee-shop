@@ -1,0 +1,13 @@
+.goods-page {
+    &__promo {
+        background: url('../../../public/img/bg/goods-page-bg.png') lightgray 50% / cover no-repeat;
+        padding: 30px 0 84px 0;
+    }
+    &__title {
+        color: #FFF;
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 60px;
+    }
+}

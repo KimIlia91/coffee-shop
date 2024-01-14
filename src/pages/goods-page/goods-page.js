@@ -3,7 +3,7 @@ import Footer from "../../components/footer/footer";
 import SubPromo from "../../components/subpromo/subpromo";
 import About from "../../components/about-coffee/about-coffee";
 import Line from "../../components/line/line";
-import './goods-page.css';
+import './goods-page.scss';
 
 const GoodsPage = ({ data }) => {
     return (

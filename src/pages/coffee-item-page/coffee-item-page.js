@@ -1,6 +1,6 @@
 import Footer from "../../components/footer/footer";
 import SubPromo from "../../components/subpromo/subpromo";
-import './coffee-main-page.css';
+import './coffee-main-page.scss';
 
 const CoffeeItemPage = () => {
     return (
