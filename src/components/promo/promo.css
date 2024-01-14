@@ -56,8 +56,9 @@
     text-decoration: none;
     margin: 18px auto 0 auto;
     color: #FFF;
-    padding-top: 5px;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 3px;
     border: 1px solid #FFF;
     background: rgba(196, 196, 196, 0.00);

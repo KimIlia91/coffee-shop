@@ -1,9 +1,24 @@
-.about {
-    margin-top: 70px;
+.about__descr {
+    max-width: 350px;
 }
 
-.about__wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
+.about__title {
+    color: #000;
+    font-family: Merienda;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.about__text {
+    margin-top: 25px;
+    color: #000;
+    text-align: center;
+    font-family: Merienda;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.about__text_40 {
+    margin-top: 40px;
 }

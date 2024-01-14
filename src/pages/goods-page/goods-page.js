@@ -1,7 +1,7 @@
 import CoffeeList from "../../components/coffee-list/coffee-list";
 import Footer from "../../components/footer/footer";
 import SubPromo from "../../components/subpromo/subpromo";
-import About from "../../components/about/about";
+import About from "../../components/about-coffee/about-coffee";
 import Line from "../../components/line/line";
 import './goods-page.css';
 

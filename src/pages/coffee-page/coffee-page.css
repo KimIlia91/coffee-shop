@@ -21,5 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 83px;
+    flex-wrap: wrap;
+    column-gap: 83px;
+    row-gap: 30px;
 }
