@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-
-import './footer.css';
 import Divider from '../divider/divider';
+
+import './footer.scss';
 
 const Footer = () => {
 

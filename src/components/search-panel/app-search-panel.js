@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './app-search-panel.css';
+import './app-search-panel.scss';
 
 const AppSearchPanel = ({ onUpdateSearchTerm }) => {
     

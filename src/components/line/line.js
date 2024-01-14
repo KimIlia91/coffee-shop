@@ -1,4 +1,4 @@
-import './line.css'
+import './line.scss'
 
 const Line = () => {
     return (

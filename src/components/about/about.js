@@ -1,5 +1,5 @@
 import Divider from "../divider/divider";
-import './about.css';
+import './about.scss';
 
 const About = ({ title, isMargin40Px }) => {
     const className = isMargin40Px ? 'about__text about-main__text_40' : `about__text`;

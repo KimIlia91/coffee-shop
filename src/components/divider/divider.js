@@ -1,4 +1,4 @@
-import './divider.css';
+import './divider.scss';
 
 const Divider = ({ className, color }) => {   
     const dividerLine = color === "white" ? "divider__line_white" : "divider__line"; 

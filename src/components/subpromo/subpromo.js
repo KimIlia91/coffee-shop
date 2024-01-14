@@ -1,5 +1,5 @@
 import Header from '../header/header';
-import './subpromo.css';
+import './subpromo.scss';
 
 const SubPromo = ({ title, imgUrl }) => {
     const test = { background: `url(${imgUrl}) lightgray 50% / cover no-repeat` };

@@ -11,7 +11,6 @@
 
 .coffee-item-page__title {
     color: #000;
-    font-family: Merienda;
     font-size: 24px;
     font-weight: 400;
     text-align: center;
@@ -33,7 +32,6 @@
 .coffee-item-page__country {
     margin-top: 26px;
     color: #000;
-    font-family: Merienda;
     font-size: 14px;
     font-weight: 400;
 }
@@ -45,7 +43,6 @@
 .coffee-item-page__text {
     margin-top: 16px;
     color: #000;
-    font-family: Merienda;
     font-size: 14px;
     font-weight: 400;
 }
@@ -56,7 +53,6 @@
 
 .coffee-item-page__price {
     color: #000;
-    font-family: Merienda;
     margin-top: 16px;
     font-size: 24px;
     font-weight: 400;

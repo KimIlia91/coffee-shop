@@ -1,5 +1,5 @@
 import About from "../about/about";
-import "./about-coffee.css";
+import "./about-coffee.scss";
 
 const AboutCoffee = ({ src, alt, title }) => {
     return (

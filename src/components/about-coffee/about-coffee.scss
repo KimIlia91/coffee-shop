@@ -1,0 +1,9 @@
+.about-coffee {
+    margin-top: 70px;
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+}

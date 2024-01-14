@@ -1,4 +1,4 @@
-import './best-products.css';
+import './best-products.scss';
 
 const BestProducts = () => {
     return (

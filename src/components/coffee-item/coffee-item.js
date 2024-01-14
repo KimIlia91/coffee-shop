@@ -1,4 +1,4 @@
-import './coffee-item.css';
+import './coffee-item.scss';
 
 const CoffeeItem = ({id, name, img, country, price }) => {
     return (

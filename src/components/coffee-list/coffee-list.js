@@ -1,6 +1,6 @@
 import CoffeeItem from '../coffee-item/coffee-item';
 import useCoffeeService from '../../services/CoffeeService';
-import './coffee-list.css';
+import './coffee-list.scss';
 import { useEffect, useState } from 'react';
 
 const CoffeeList = (props) => {
@@ -24,10 +24,8 @@ const CoffeeList = (props) => {
     console.log('CoffeeList');
 
     return (
-        <div className='container'>
-            <div className="coffee-list">
-                { items }
-            </div>
+        <div className="coffee-list">
+            { items }
         </div>
     )
 }

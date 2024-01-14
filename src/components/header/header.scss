@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-left: 5%;
+    &__logo {
+        height: 35px;
+    }
+    &__nav {
+        display: flex;
+        align-items: flex-end;
+        &-item {
+            text-decoration: none;
+            width: 105px;
+            height: 13px;
+            color: #FFF;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-size: 12px;
+            font-weight: 400;
+        }
+    }
+}

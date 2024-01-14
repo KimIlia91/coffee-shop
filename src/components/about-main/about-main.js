@@ -1,6 +1,6 @@
 
 import About from '../about/about';
-import './about-main.css';
+import './about-main.scss';
 
 const AboutMain = ({ title, isMargin40Px }) => {
     return (
