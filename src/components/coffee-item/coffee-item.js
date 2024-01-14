@@ -6,7 +6,7 @@ const CoffeeItem = ({id, name, img, country, price }) => {
             <img src={ img } alt={ name } />
             <div className="coffee-item__name">{ name }</div>
             <div className="coffee-item__country">{ country }</div>
-            <div className="coffee-item__price">{ `${price}$`  }</div>
+            <div className="coffee-item__price">{ `${price}$` }</div>
         </a>
     )
 }

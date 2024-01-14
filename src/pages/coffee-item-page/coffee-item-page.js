@@ -1,5 +1,5 @@
-import Footer from "../footer/footer";
-import SubPromo from "../subpromo/subpromo";
+import Footer from "../../components/footer/footer";
+import SubPromo from "../../components/subpromo/subpromo";
 import './coffee-main-page.css';
 
 const CoffeeItemPage = () => {

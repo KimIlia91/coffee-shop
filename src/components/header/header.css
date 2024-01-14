@@ -1,7 +1,12 @@
 .header {
     display: flex;
     flex-direction: row;
-    padding: 0 40px 0 150px;
+    align-items: flex-end;
+    padding-left: 150px;
+}
+
+.header__logo {
+    height: 35px;
 }
 
 .header__nav {

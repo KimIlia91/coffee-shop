@@ -1,32 +1,28 @@
-import React from 'react';
+import { useState } from 'react';
 import './app-search-panel.css';
 
-class AppSearchPanel extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            term: ''
-        }
-    }
+const AppSearchPanel = ({ onUpdateSearchTerm }) => {
+    
+    const [ term, setTerm ] = useState('');
 
-    onUpdateSearch = (e) => {
+    const onValueChange = (e) => {
         const term = e.target.value;
-        this.setState({ term });
-        this.props.onUpdateSearch(term);
+        setTerm(term);
+        onUpdateSearchTerm(term);
     }
 
-    render() {
-        return (
-            <div className="app-search-panel">
-                <div className="app-search-panel__text">Lookiing for</div>
-                <input type="text" 
-                       placeholder="start typing here..." 
-                       value={ this.state.term }
-                       className="app-search-panel__input"
-                       onChange={ this.onUpdateSearch }/>
-            </div>
-        )
-    }
+    // console.log('AppSearchPanel');
+
+    return (
+        <div className="app-search-panel">
+            <div className="app-search-panel__text">Lookiing for</div>
+            <input type="text" 
+                   placeholder="start typing here..." 
+                   value={ term }
+                   className="app-search-panel__input"
+                   onChange={ onValueChange }/>
+        </div>
+    )
 }
 
 export default AppSearchPanel;

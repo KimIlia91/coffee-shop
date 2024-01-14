@@ -1,8 +1,8 @@
 import { Fragment } from "react";
-import Promo from "../promo/promo";
-import BestProducts from "./best-products/best-products";
-import AboutText from "../about-text/about-text";
-import Footer from "../footer/footer";
+import Promo from "../../components/promo/promo";
+import BestProducts from "../../components/best-products/best-products";
+import AboutText from "../../components/about-text/about-text";
+import Footer from "../../components/footer/footer";
 import './main-page.css';
 
 const MainPage = () => {

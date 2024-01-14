@@ -1,7 +1,17 @@
+import { Link } from 'react-router-dom';
+
 import './footer.css';
 import Divider from '../divider/divider';
 
 const Footer = () => {
+
+    const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+    };
+
     return (
         <footer className="footer">
             <div className="footer__wrapper">
@@ -22,11 +32,10 @@ const Footer = () => {
                     </svg>
                 </div>
                 <nav className='footer__nav'>
-                    <a href='#' className="footer__nav-item">Coffee house</a>
-                    <a href='#' className="footer__nav-item">Our coffee</a>
-                    <a href='#' className="footer__nav-item">For your pleasure</a>
+                    <Link to='/' className="footer__nav-item" onClick={scrollToTop}>Coffee house</Link>
+                    <Link to='/coffee' className="footer__nav-item" onClick={scrollToTop}>Our coffee</Link>
+                    <Link to='/goods' className="footer__nav-item" onClick={scrollToTop}>For your pleasure</Link>
                 </nav>
-                
             </div>
             <Divider className={ "divider__footer" } color={ "black" }/>
         </footer>

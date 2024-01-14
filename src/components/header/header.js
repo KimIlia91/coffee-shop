@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import './header.css';
 
 const Header = () => {
@@ -20,9 +22,9 @@ const Header = () => {
             </svg>
             </div>
             <nav className='header__nav'>
-                <a href="#" className="header__nav-item">Coffee house</a>
-                <a href="#" className="header__nav-item">Our coffee</a>
-                <a href="#" className="header__nav-item">For your pleasure</a>
+                <Link to="/" className="header__nav-item">Coffee house</Link>
+                <Link to="/coffee" className="header__nav-item">Our coffee</Link>
+                <Link to="/goods" className="header__nav-item">For your pleasure</Link>
             </nav>
         </header>
     )

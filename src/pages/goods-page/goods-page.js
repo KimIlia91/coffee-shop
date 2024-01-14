@@ -1,8 +1,8 @@
-import CoffeeList from "../coffee-list/coffee-list";
-import Footer from "../footer/footer";
-import SubPromo from "../subpromo/subpromo";
-import About from "../about/about";
-import Line from "../line/line";
+import CoffeeList from "../../components/coffee-list/coffee-list";
+import Footer from "../../components/footer/footer";
+import SubPromo from "../../components/subpromo/subpromo";
+import About from "../../components/about/about";
+import Line from "../../components/line/line";
 import './goods-page.css';
 
 const GoodsPage = ({ data }) => {
