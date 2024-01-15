@@ -7,7 +7,9 @@
     padding: 20px 20px 20px 20px;
     text-decoration: none;
     img {
-        width: 100%;
+        width: 167px;
+        height: 115px;
+        object-fit: fill;
     }
     &__name {
         margin-top: 14px;

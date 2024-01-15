@@ -1,34 +1,41 @@
+import { useEffect, useState } from 'react';
 import './best-products.scss';
+import useCoffeeService from '../../services/CoffeeService';
+import { Link } from 'react-router-dom';
 
 const BestProducts = () => {
+    const [ products, setProducts ] = useState([]);
+
+    const { getBestProducts } = useCoffeeService();
+
+    useEffect(() => {
+        setProducts(getBestProducts());
+    }, []);
+    console.log(products);
+    const items = renderItems(products);
+
     return (
         <div className="best-products">
             <div className="best-products__title">Our best</div>
             <div className="best-products__wrapper">
-                <a href="#">
-                    <div className="best-products__item">
-                        <img src="/img/products/solimo-coffee.png" alt="solimo-coffee" />
-                        <div className="best-products__descr">Solimo Coffee Beans 2 kg</div>
-                        <div className="best-products__price">10.73$</div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div className="best-products__item">
-                        <img src="/img/products/presto-coffee.png" alt="presto-coffee" />
-                        <div className="best-products__descr">Presto Coffee Beans 1 kg</div>
-                        <div className="best-products__price">15.99$</div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div className="best-products__item">
-                        <img src="/img/products/aromistico-coffee.png" alt="aromistico-coffee" />
-                        <div className="best-products__descr">AROMISTICO Coffee 1 kg</div>
-                        <div className="best-products__price">6.99$</div>
-                    </div>
-                </a>
+                { items }
             </div>
         </div>
     )
+
+    function renderItems(items) {
+        return items.map(item => {
+            return (
+                <Link to={ `/coffee/${item.id}` }>
+                    <div className="best-products__item">
+                        <img src={item.img} alt={ item.name } />
+                        <div className="best-products__descr">{ item.name }</div>
+                        <div className="best-products__price">{ item.price }$</div>
+                    </div>
+                </Link>
+            )
+        });
+    }
 }
 
 export default BestProducts;

@@ -1,13 +1,38 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Footer from "../../components/footer/footer";
 import SubPromo from "../../components/subpromo/subpromo";
-import './coffee-main-page.scss';
+import useCoffeeService from "../../services/CoffeeService";
+
+import './coffee-item-page.scss';
 
 const CoffeeItemPage = () => {
+    const { coffeeId } = useParams();
+    const [ coffee, setCoffee ] = useState(null);
+    const { getCoffeeById } = useCoffeeService();
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const newCoffee = getCoffeeById(coffeeId);
+                setCoffee(newCoffee);
+            } catch (error) {
+                console.error('Error fetching coffee:', error);
+            }
+        };
+
+        fetchData();
+    }, [coffeeId]);
+
+    if (!coffee) {
+        return <p>Loading...</p>;
+    }
+
     return (
         <div className="coffee-item-page">
             <SubPromo title={ "Our Coffee" } imgUrl={ "/img/bg/coffee-shop-bg.png" }/>
             <div className="coffee-item-page__wrapper">
-                <img src="/img/test-product.jpg" alt="test-product" />
+                <img src={ coffee.img } alt={ coffee.name } />
                 <div className="coffee-item-page__descr">
                     <div className="coffee-item-page__title">About it</div>
                     <div className="coffee-item-page__divider">
@@ -24,12 +49,12 @@ const CoffeeItemPage = () => {
                         </svg>
                         <div className="coffee-item-page__line"></div>
                     </div>
-                    <div className="coffee-item-page__country"><span>Country:</span> Brasil</div>
+                    <div className="coffee-item-page__country"><span>Country:</span> { coffee.country }</div>
                     <div className="coffee-item-page__text">
-                        <span>Description:</span>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea   commodo consequat.
+                        <span>Description:</span> { coffee.description }
                     </div>
                     <div className="coffee-item-page__price">
-                        <span>Price:</span> 16.99$
+                        <span>Price:</span> { coffee.price }$
                     </div>
                 </div>
             </div>

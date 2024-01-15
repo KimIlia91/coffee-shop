@@ -5,7 +5,7 @@ import About from "../../components/about-coffee/about-coffee";
 import Line from "../../components/line/line";
 import './goods-page.scss';
 
-const GoodsPage = ({ data }) => {
+const GoodsPage = () => {
     return (
         <div className="goods-page">
             <SubPromo title={ "For your pleasure" } imgUrl={ "/img/bg/goods-page-bg.png" }/>
@@ -15,7 +15,7 @@ const GoodsPage = ({ data }) => {
             <div className="coffee-about__line_big"></div>
             <div className="coffee-about__control-panel">
             </div>  
-                <CoffeeList data={ data }/>
+                <CoffeeList disablePanel={ true }/>
             </div>
             <Footer/>
         </div>

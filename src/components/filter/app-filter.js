@@ -1,21 +1,34 @@
+import { useState } from 'react';
 import './app-filter.scss';
 
-const AppFilter = (props) => {
+const AppFilter = ({ updateFilter, newFilter }) => {
+    const [ filter, setFilter ] = useState('all');
 
     const btnData = [
-        { name: 'brazil', label: 'Brazil' },
-        { name: 'kenya', label: 'Kenya' },
-        { name: 'columbia', label: 'Columbia' }
+        { name: 'Brazil', label: 'Brazil' },
+        { name: 'Kenya', label: 'Kenya' },
+        { name: 'Columbia', label: 'Columbia' }
     ];
 
+    const onUpdateFilter = (name) => {
+        if (filter === name) {
+            setFilter('all');
+            updateFilter('all');
+            return;
+        }
+
+        setFilter(name);
+        updateFilter(name);
+    }
+    
     const buttons = btnData.map(({ name, label }) => {
-        const clazz = props.filter === name ? 'app-filter__btn app-filter__btn_active' : 'app-filter__btn'
+        const clazz = newFilter === name || filter !== newFilter ? 'app-filter__btn app-filter__btn_active' : 'app-filter__btn';
 
         return (
             <button type="button"
                     className={ clazz }
                     key={ name }
-                    onClick={ () => props.onUpdateFilter(name) }>
+                    onClick={ () => onUpdateFilter(name) }>
                     { label }
             </button>
         )

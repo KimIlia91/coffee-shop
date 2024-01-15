@@ -4,6 +4,11 @@
         display: flex;
         justify-content: center;
         gap: 42px;
+        img {
+            width: 498px;
+            height: 355px;
+            object-fit: contain;
+        }
     }
     &__descr {
         width: 420px;
