@@ -26,7 +26,7 @@ const BestProducts = () => {
     function renderItems(items) {
         return items.map(item => {
             return (
-                <Link to={ `/coffee/${item.id}` }>
+                <Link key={ item.id } to={ `/coffee/${item.id}` }>
                     <div className="best-products__item">
                         <img src={item.img} alt={ item.name } />
                         <div className="best-products__descr">{ item.name }</div>

@@ -56,7 +56,7 @@ function renderItems(coffees) {
         const { id, name, img, price, country } = item;
         console.log(id);
         return (
-            <CoffeeItem id={ id } name={ name } img= { img } price={ price } country={ country }/>
+            <CoffeeItem key={ id } id={ id } name={ name } img= { img } price={ price } country={ country }/>
         )
     });
 }
