@@ -1,5 +1,23 @@
 @media (max-width: 600px) {
   .header {
     padding-left: 5%;
+    &__nav {
+      gap: 25px;
+    }
+  }
+  .footer {
+    &__nav {
+        gap: 25px;
+    }
+  }
+  .coffee-item-page {
+    &__wrapper {
+      img {
+          width: 300px;
+      }
+    }
+    &__descr {
+      margin: 0 5%;
+    }
   }
 }
