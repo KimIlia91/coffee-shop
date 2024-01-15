@@ -11,7 +11,7 @@ const BestProducts = () => {
     useEffect(() => {
         setProducts(getBestProducts());
     }, []);
-    console.log(products);
+    
     const items = renderItems(products);
 
     return (

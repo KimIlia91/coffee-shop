@@ -3,15 +3,17 @@
         padding: 70px 0 30px 0;
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 42px;
         img {
             width: 498px;
-            height: 355px;
+            max-height: 355px;
             object-fit: contain;
         }
     }
     &__descr {
-        width: 420px;
+        max-width: 420px;
+        margin: 0 5%;
     }
     &__title {
         color: #000;

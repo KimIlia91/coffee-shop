@@ -12,16 +12,8 @@ const CoffeeItemPage = () => {
     const { getCoffeeById } = useCoffeeService();
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const newCoffee = getCoffeeById(coffeeId);
-                setCoffee(newCoffee);
-            } catch (error) {
-                console.error('Error fetching coffee:', error);
-            }
-        };
-
-        fetchData();
+        const newCoffee = getCoffeeById(coffeeId);
+        setCoffee(newCoffee);
     }, [coffeeId]);
 
     if (!coffee) {
