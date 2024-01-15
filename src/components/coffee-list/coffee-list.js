@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useTransition } from 'react';
 
 import CoffeeItem from '../coffee-item/coffee-item';
 import AppSearchPanel from '../search-panel/app-search-panel';
@@ -11,6 +11,7 @@ const CoffeeList = ({ disablePanel = false }) => {
     const [ coffees, setCoffees] = useState([]);
     const [ searchTerm, setSearchTerm ] = useState('');
     const [ filter, setFilter ] = useState('all');
+    const [ isPending, startTransition ] = useTransition();
 
     const { getAllCoffee } = useCoffeeService();
 
@@ -27,17 +28,20 @@ const CoffeeList = ({ disablePanel = false }) => {
     }
 
     const onUpdateSearchTerm = (newSearchTerm) => {
-        setSearchTerm(newSearchTerm);
-        onRequest(newSearchTerm, filter);
+        startTransition(() => {
+            setSearchTerm(newSearchTerm);
+            onRequest(newSearchTerm, filter);
+        })
     }
 
     const onUpdateFilter = (newFilter) => {
-        setFilter(newFilter);
-        onRequest(searchTerm, newFilter);
+        startTransition(() => {
+            setFilter(newFilter);
+            onRequest(searchTerm, newFilter);
+        })
     }
    
     const items = renderItems(coffees);
-    console.log('render');
     return (
         <div className="coffee-list">
             <div className="coffee-list__control-panel" style={ { 'display': disablePanel ? 'none' : '' } }>
@@ -45,7 +49,7 @@ const CoffeeList = ({ disablePanel = false }) => {
                 <AppFilter updateFilter={ onUpdateFilter } newFilter={ filter }/>
             </div> 
             <div className="coffee-list__wrapper">
-                { items }
+                { isPending ? <h2>Loading...</h2> : items }
             </div>
         </div>
     )
@@ -54,7 +58,6 @@ const CoffeeList = ({ disablePanel = false }) => {
 function renderItems(coffees) {
     return coffees.map(item => {
         const { id, name, img, price, country } = item;
-        console.log(id);
         return (
             <CoffeeItem key={ id } id={ id } name={ name } img= { img } price={ price } country={ country }/>
         )
