@@ -6,7 +6,7 @@ const About = ({ title, isMargin40Px }) => {
     return (
         <>
             <div className="about__descr">
-                <div className={"about__title"}>{ title }</div>
+                <h2 className={"about__title"}>{ title }</h2>
                 <Divider className={ "divider" } color={ "black" }/>
                 <div className={ className }>
                     Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.

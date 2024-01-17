@@ -16,7 +16,7 @@ const BestProducts = () => {
 
     return (
         <div className="best-products">
-            <div className="best-products__title">Our best</div>
+            <h2 className="best-products__title">Our best</h2>
             <div className="best-products__wrapper">
                 { items }
             </div>
@@ -29,7 +29,7 @@ const BestProducts = () => {
                 <Link key={ item.id } to={ `/coffee/${item.id}` }>
                     <div className="best-products__item">
                         <img src={item.img} alt={ item.name } />
-                        <div className="best-products__descr">{ item.name }</div>
+                        <h3 className="best-products__descr">{ item.name }</h3>
                         <div className="best-products__price">{ item.price }$</div>
                     </div>
                 </Link>
