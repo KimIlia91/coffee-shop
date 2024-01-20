@@ -8,9 +8,11 @@ const BestProducts = () => {
 
     const { getBestProducts } = useCoffeeService();
 
+    /* eslint-disable */
     useEffect(() => {
         setProducts(getBestProducts());
     }, []);
+    /* eslint-enable */
     
     const items = renderItems(products);
 

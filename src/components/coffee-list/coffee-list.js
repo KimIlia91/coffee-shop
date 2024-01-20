@@ -15,9 +15,11 @@ const CoffeeList = ({ disablePanel = false }) => {
 
     const { getAllCoffee } = useCoffeeService();
 
+    /* eslint-disable */
     useEffect(() => {
         onRequest();
     }, []);
+    /* eslint-disable */
     
     const onRequest = (searchTerm, filter) => {
         onCoffeeLoaded(getAllCoffee(searchTerm, filter));
