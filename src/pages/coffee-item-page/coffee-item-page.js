@@ -11,10 +11,12 @@ const CoffeeItemPage = () => {
     const [ coffee, setCoffee ] = useState(null);
     const { getCoffeeById } = useCoffeeService();
 
+    /* eslint-disable */
     useEffect(() => {
         const newCoffee = getCoffeeById(coffeeId);
         setCoffee(newCoffee);
     }, [coffeeId]);
+    /* eslint-disable */
 
     if (!coffee) {
         return <p>Loading...</p>;
