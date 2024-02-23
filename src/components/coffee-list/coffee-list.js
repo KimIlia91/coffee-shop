@@ -4,6 +4,7 @@ import CoffeeItem from '../coffee-item/coffee-item';
 import AppSearchPanel from '../search-panel/app-search-panel';
 import AppFilter from '../filter/app-filter';
 import useCoffeeService from '../../services/CoffeeService';
+import Spinner from '../../components/spinner/Spinner';
 
 import './coffee-list.scss';
 
@@ -51,7 +52,7 @@ const CoffeeList = ({ disablePanel = false }) => {
                 <AppFilter updateFilter={ onUpdateFilter } newFilter={ filter }/>
             </div> 
             <div className="coffee-list__wrapper">
-                { isPending ? <h2>Loading...</h2> : items }
+                { isPending ? <Spinner /> : items }
             </div>
         </div>
     )
