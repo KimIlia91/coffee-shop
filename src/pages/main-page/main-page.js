@@ -1,15 +1,24 @@
 import Promo from "../../components/promo/promo";
-import BestProducts from "../../components/best-products/best-products";
-import AboutMain from "../../components/about-main/about-main";
 import Footer from "../../components/footer/footer";
+import AboutMain from "../../components/about-main/about-main";
+import ErrorBoundry from '../../components/errorBoundry/ErrorBoundary';
+import BestProducts from "../../components/best-products/best-products";
 
 const MainPage = () => {
     return (
         <>
-            <Promo/>
-            <AboutMain title={ "About Us" } isMargin40Px={ true }/>
-            <BestProducts/>
-            <Footer/>
+            <ErrorBoundry>
+                <Promo/>
+            </ErrorBoundry>
+            <ErrorBoundry>
+                <AboutMain title={ "About Us" } isMargin40Px={ true }/>
+            </ErrorBoundry>
+            <ErrorBoundry>
+                <BestProducts/>
+            </ErrorBoundry>
+            <ErrorBoundry>
+                <Footer/>
+            </ErrorBoundry>
         </>
     )
 }

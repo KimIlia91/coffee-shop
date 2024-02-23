@@ -4,14 +4,13 @@ import Divider from '../divider/divider';
 import './footer.scss';
 
 const Footer = () => {
-
     const scrollToTop = () => {
         window.scrollTo({
           top: 0,
           behavior: 'smooth'
         });
     };
-
+    
     return (
         <footer className="footer">
             <div className="footer__wrapper">

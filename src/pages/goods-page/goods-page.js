@@ -10,11 +10,9 @@ const GoodsPage = () => {
         <div className="goods-page">
             <SubPromo title={ "For your pleasure" } imgUrl={ "/img/bg/goods-page-bg.png" }/>
             <div className='coffee-about'>
-            <About src={ '/img/goods-page-img.png' } alt={ "goods-page-img" } title={ "About our goods" }/>
-            <Line/>
-            <div className="coffee-about__line_big"></div>
-            <div className="coffee-about__control-panel">
-            </div>  
+                <About src={ '/img/goods-page-img.png' } alt={ "goods-page-img" } title={ "About our goods" }/>
+                <Line/>
+                <div className="coffee-about__line_big"></div>
                 <CoffeeList disablePanel={ true }/>
             </div>
             <Footer/>
